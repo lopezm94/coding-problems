@@ -2,7 +2,7 @@ import argparse
 
 # shift_chr(char: str) -> int
 # Example: shift_chr('a', 1) -> 98
-def shift_chr(char: str, shift: int) -> int:
+def shift_chr(char: str, shift: int) -> str:
     return chr(97 + (ord(char) - 97 + shift) % 26)
 
 # shift_letters(string: str, shift: int) -> str
@@ -14,7 +14,6 @@ def shift_letters(string: str, shift: int) -> str:
         result += shift_chr(char, shift)
     return result
 
-# Example: python 2_caesar_cipher_redux.py 'abc' 1 -> 'bcd'
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Shift letters in a string by a given number.')
     parser.add_argument('string', type=str, help='The string to shift')
