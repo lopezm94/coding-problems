@@ -10,6 +10,7 @@ def add_it_up(n: int) -> int:
     return sum(range(n + 1))
 
 # Expects a single integer argument and returns the sum of all integers from 0 to that number.
+# Example: python 1_sum_range.py 5 -> 15
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Sum up integers from 0 to a given number.')
     parser.add_argument('number', type=int, help='The number to sum up to')
