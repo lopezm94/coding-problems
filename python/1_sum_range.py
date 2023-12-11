@@ -5,7 +5,7 @@ import argparse
 # If the argument is not an integer, or is less than zero, return 0.
 # Example: add_it_up(5) -> 15
 def add_it_up(n: int) -> int:
-    if not isinstance(n, int) or n < 0:
+    if n < 0:
         return 0
     return sum(range(n + 1))
 
