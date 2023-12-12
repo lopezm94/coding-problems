@@ -5,7 +5,7 @@ from typing import List
 # Example: swap_first_and_last(['a', 'b', 'c']) -> ['c', 'b', 'a']
 def swap_first_and_last(elements: List[str]) -> List[str]:
     if len(elements) > 1:
-        elements[0], elements[-1] = elements[-1], elements[0]
+        elements[-1], elements[0] = elements[0], elements[-1]
     return elements
 
 if __name__ == "__main__":
