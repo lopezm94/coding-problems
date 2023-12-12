@@ -18,3 +18,6 @@ For type verifications execute `mypy <file_path>`
 **Example:**
 - Input : [12, 35, 9, 56, 24]
 - Output : [24, 35, 9, 56, 12]
+
+### 4. Implement an interface I
+**Objective:** Define an interface object with two implementations.
