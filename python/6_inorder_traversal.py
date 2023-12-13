@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List
+from typing import List, Optional
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -7,10 +7,9 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def inorderTraversal(root: TreeNode) -> List[int]:
+def inorderTraversal(root: Optional[TreeNode]) -> List[int]:
     stack, result = [], []
     current = root
-
     while current or stack:
         while current:
             stack.append(current)
@@ -18,8 +17,6 @@ def inorderTraversal(root: TreeNode) -> List[int]:
         current = stack.pop()
         result.append(current.val)
         current = current.right
-
-    return result
 
 # Create a larger binary tree
 root = TreeNode(1)
