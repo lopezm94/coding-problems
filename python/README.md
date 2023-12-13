@@ -56,3 +56,39 @@ Example 3:
 
 Input: root = [1]
 Output: [1]
+
+### 7. Depth-First Search (DFS) Traversal
+
+**Objective:** Implement both recursive and iterative versions of the Depth-First Search (DFS) algorithm to traverse a graph. The graph will be represented as an adjacency list, and you should return the order of nodes visited during the traversal.
+
+**Example 1:**
+
+Input: 
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D'],
+    'C': ['E'],
+    'D': [],
+    'E': []
+}, 
+start = 'A'
+
+Output: 
+Recursive: ['A', 'B', 'D', 'C', 'E']
+Iterative: ['A', 'C', 'E', 'B', 'D']
+
+**Example 2:**
+
+Input: 
+graph = {
+    '1': ['2', '3'],
+    '2': ['4'],
+    '3': ['5'],
+    '4': [],
+    '5': []
+}, 
+start = '1'
+
+Output: 
+Recursive: ['1', '2', '4', '3', '5']
+Iterative: ['1', '3', '5', '2', '4']
