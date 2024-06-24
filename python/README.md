@@ -92,3 +92,63 @@ start = '1'
 Output: 
 Recursive: ['1', '2', '4', '3', '5']
 Iterative: ['1', '3', '5', '2', '4']
+
+### 8. Dijkstra's Shortest Path Algorithm
+
+**Objective:** Implement Dijkstra's algorithm to find the shortest path from a start node to all other nodes in a weighted graph.
+
+**Example 1:**
+
+Input: 
+graph = {
+    'A': {'B': 1, 'C': 4},
+    'B': {'A': 1, 'C': 2, 'D': 5},
+    'C': {'A': 4, 'B': 2, 'D': 1},
+    'D': {'B': 5, 'C': 1}
+}, 
+start = 'A'
+
+Output: 
+Shortest paths from A: {'A': 0, 'B': 1, 'C': 3, 'D': 4}
+
+**Example 2:**
+
+Input: 
+graph = {
+    '1': {'2': 6, '3': 5, '4': 5},
+    '2': {'1': 6, '5': -1},
+    '3': {'1': 5, '5': 1, '4': 2},
+    '4': {'1': 5, '3': 2, '6': -2},
+    '5': {'2': -1, '3': 1, '6': 3},
+    '6': {'4': -2, '5': 3}
+}, 
+start = '1'
+
+Output: 
+Shortest paths from 1: {'1': 0, '2': 5, '3': 5, '4': 7, '5': 6, '6': 5}
+
+---
+
+### 9. Sorting an Array
+
+**Objective:** Write two functions to sort an array. The first function should use Python's standard library sorting methods. The second should implement Quick Sort and Merge Sort algorithms.
+
+**Example 1:**
+
+Input: 
+array = [3, 6, 8, 10, 1, 2, 1]
+
+Output: 
+Standard Library Sort: [1, 1, 2, 3, 6, 8, 10]
+Quick Sort: [1, 1, 2, 3, 6, 8, 10]
+Merge Sort: [1, 1, 2, 3, 6, 8, 10]
+
+**Example 2:**
+
+Input: 
+array = [12, 11, 13, 5, 6, 7]
+
+Output: 
+Standard Library Sort: [5, 6, 7, 11, 12, 13]
+Quick Sort: [5, 6, 7, 11, 12, 13]
+Merge Sort: [5, 6, 7, 11, 12, 13]
