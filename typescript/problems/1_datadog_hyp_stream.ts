@@ -1,5 +1,5 @@
 // Solution
-class Filter {
+class Solution1 {
     keywords: Set<string>
 
     constructor(keywords: string) {
@@ -32,8 +32,17 @@ const stream: string[] = [
 
 describe('tests', () => {
     test('apple', () => {
-        const filter = new Filter('facebook, google')
+        const stream: string[] = [
+            'apple, facebook, google', 
+            'banana, facebook', 
+            'facebook, google, tesla', 
+            'intuit, google, facebook'
+        ];
+
+        const filter = new Solution1('facebook, google')
         const result = filter.filterElement(stream[0])
-        expect(result).toBe('apple');
+
+        const expectedResult = 'apple'
+        expect(result).toBe(expectedResult);
     });
 });
