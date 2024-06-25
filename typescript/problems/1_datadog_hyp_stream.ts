@@ -39,8 +39,8 @@ describe('tests', () => {
             'intuit, google, facebook'
         ];
 
-        const filter = new Solution1('facebook, google')
-        const result = filter.filterElement(stream[0])
+        const sol = new Solution1('facebook, google')
+        const result = sol.filterElement(stream[0])
 
         const expectedResult = 'apple'
         expect(result).toBe(expectedResult);

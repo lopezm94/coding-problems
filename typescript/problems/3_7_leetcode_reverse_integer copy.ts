@@ -44,8 +44,8 @@ describe('tests', () => {
     test('reverse 123', () => {
         const num = 123
 
-        const filter = new Solution3()
-        const result = filter.reverse(num)
+        const sol = new Solution3()
+        const result = sol.reverse(num)
 
         const expectedResult = 321
         expect(result).toStrictEqual(expectedResult);
@@ -54,8 +54,8 @@ describe('tests', () => {
     test('reverse -123', () => {
         const num = -123
 
-        const filter = new Solution3()
-        const result = filter.reverse(num)
+        const sol = new Solution3()
+        const result = sol.reverse(num)
 
         const expectedResult = -321
         expect(result).toStrictEqual(expectedResult);
@@ -64,8 +64,8 @@ describe('tests', () => {
     test('reverse 120', () => {
         const num = 120
 
-        const filter = new Solution3()
-        const result = filter.reverse(num)
+        const sol = new Solution3()
+        const result = sol.reverse(num)
 
         const expectedResult = 21
         expect(result).toStrictEqual(expectedResult);

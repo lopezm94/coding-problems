@@ -81,8 +81,8 @@ describe('tests', () => {
         const numberOne = new ListNode(3, new ListNode(4, new ListNode(2, null)))
         const numberTwo = new ListNode(4, new ListNode(6, new ListNode(5, null)))
 
-        const filter = new Solution2()
-        const result = filter.addTwoNumbers(numberOne, numberTwo)
+        const sol = new Solution2()
+        const result = sol.addTwoNumbers(numberOne, numberTwo)
 
         const expectedResult = new ListNode(7, new ListNode(0, new ListNode(8, null)))
         expect(result).toStrictEqual(expectedResult);
@@ -92,8 +92,8 @@ describe('tests', () => {
         const numberOne = new ListNode(0, null)
         const numberTwo = new ListNode(0, null)
 
-        const filter = new Solution2()
-        const result = filter.addTwoNumbers(numberOne, numberTwo)
+        const sol = new Solution2()
+        const result = sol.addTwoNumbers(numberOne, numberTwo)
 
         const expectedResult =  new ListNode(0, null)
         expect(result).toStrictEqual(expectedResult);
@@ -103,8 +103,8 @@ describe('tests', () => {
         const numberOne = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, null)))))))
         const numberTwo = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, null))))
 
-        const filter = new Solution2()
-        const result = filter.addTwoNumbers(numberOne, numberTwo)
+        const sol = new Solution2()
+        const result = sol.addTwoNumbers(numberOne, numberTwo)
 
         const expectedResult = new ListNode(8, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(0, new ListNode(0, new ListNode(0, new ListNode(1, null))))))))
         expect(result).toStrictEqual(expectedResult);

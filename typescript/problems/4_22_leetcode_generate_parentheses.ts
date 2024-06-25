@@ -45,8 +45,8 @@ describe('tests', () => {
     test('n = 3', () => {
         const n = 3
 
-        const filter = new Solution4()
-        const result = filter.generateParenthesis(n)
+        const sol = new Solution4()
+        const result = sol.generateParenthesis(n)
 
         const expectedResult = ["((()))","(()())","(())()","()(())","()()()"]
         expect(result).toStrictEqual(expectedResult);
@@ -55,8 +55,8 @@ describe('tests', () => {
     test('n = 1', () => {
         const n = 1
 
-        const filter = new Solution4()
-        const result = filter.generateParenthesis(n)
+        const sol = new Solution4()
+        const result = sol.generateParenthesis(n)
 
         const expectedResult = ["()"]
         expect(result).toStrictEqual(expectedResult);
