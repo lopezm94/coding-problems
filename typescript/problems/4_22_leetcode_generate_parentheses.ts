@@ -17,16 +17,34 @@ class Solution4 {
         return result
     }
 
-    generateParenthesis(n: number, open: number = 0): string[] {
-        if (open < 0) {
-            return []
-        }
+    generateParenthesisOptimized(n: number, open: number = 0): string[] {
         let memoizedResult = this.problemSpace.get(n)?.get(open)
         if (memoizedResult != null) {
             return [memoizedResult]
         }
         if (n == 0) {
             return [this.closeParentheses(open)]
+        }
+        let permutations = []
+        permutations.push(
+            this.generateParenthesis(n-1, open+1)
+            .map(result => "(" + result)
+        )
+        if (open > 0) {
+            permutations.push(
+                this.generateParenthesis(n, open-1)
+                .map(result => ")" + result)
+            )
+        }
+        return permutations.flat()
+    };
+
+    generateParenthesis(n: number, open: number = 0): string[] {
+        if (open < 0 || n < 0) {
+            return []
+        }
+        if (open == 0 && n == 0) {
+            return ['']
         }
         let permutations = []
         permutations.push(
