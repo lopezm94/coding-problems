@@ -18,6 +18,9 @@ class Solution4 {
     }
 
     generateParenthesis(n: number, open: number = 0): string[] {
+        if (open < 0) {
+            return []
+        }
         let memoizedResult = this.problemSpace.get(n)?.get(open)
         if (memoizedResult != null) {
             return [memoizedResult]
@@ -30,12 +33,10 @@ class Solution4 {
             this.generateParenthesis(n-1, open+1)
             .map(result => "(" + result)
         )
-        if (open > 0) {
-            permutations.push(
-                this.generateParenthesis(n, open-1)
-                .map(result => ")" + result)
-            )
-        }
+        permutations.push(
+            this.generateParenthesis(n, open-1)
+            .map(result => ")" + result)
+        )
         return permutations.flat()
     };
 }
