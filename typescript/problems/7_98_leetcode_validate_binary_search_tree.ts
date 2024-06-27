@@ -39,6 +39,25 @@ class Solution7 {
 
         return isLeftValid && isRightValid
     };
+
+    isValidBSTIterative(root: TreeNode | null): boolean {
+        if (root == null) return true;
+
+        const stack: { node: TreeNode | null, min: number, max: number }[] = [];
+        stack.push({ node: root, min: this.MIN_NODE_VAL, max: this.MAX_NODE_VAL });
+
+        while (stack.length > 0) {
+            const { node, min, max } = stack.pop()!;
+
+            if (node === null) continue;
+            if (node.val < min || node.val > max) return false;
+
+            stack.push({ node: node.right, min: this.calcMax(node.val, min), max: max });
+            stack.push({ node: node.left, min: min, max: this.calcMin(node.val, max) });
+        }
+
+        return true;
+    }
 }
 
 // Tests
