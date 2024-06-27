@@ -7,8 +7,8 @@ class Solution5 {
         if (remaining < 0 || index > nums.length) {
             return []
         }
-        if (remaining == 0) {
-            if (target == 0) {
+        if (index == nums.length) {
+            if (remaining == 0 && target == 0) {
                 return [[]]
             } else {
                 return []
