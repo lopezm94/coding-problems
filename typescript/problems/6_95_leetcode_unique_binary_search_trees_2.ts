@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/unique-binary-search-trees-ii/
 
-class TreeNode {
+export class TreeNode {
     val: number
     left: TreeNode | null
     right: TreeNode | null
@@ -40,21 +40,21 @@ class Solution6 {
 
 // Tests
 describe('tests', () => {
-    // test('n = 3', () => {
-    //     const n = 3
+    test('n = 3', () => {
+        const n = 3
 
-    //     const sol = new Solution6()
-    //     const result = sol.generateTrees(n)
+        const sol = new Solution6()
+        const result = sol.generateTrees(n)
 
-    //     const tree1 = new TreeNode(1, null, new TreeNode(2, null, new TreeNode(3)));
-    //     const tree2 = new TreeNode(1, null, new TreeNode(3, new TreeNode(2), null));
-    //     const tree3 = new TreeNode(2, new TreeNode(1), new TreeNode(3));
-    //     const tree4 = new TreeNode(3, new TreeNode(1, null, new TreeNode(2)), null);
-    //     const tree5 = new TreeNode(3, new TreeNode(2, new TreeNode(1), null), null);
+        const tree1 = new TreeNode(1, null, new TreeNode(2, null, new TreeNode(3)));
+        const tree2 = new TreeNode(1, null, new TreeNode(3, new TreeNode(2), null));
+        const tree3 = new TreeNode(2, new TreeNode(1), new TreeNode(3));
+        const tree4 = new TreeNode(3, new TreeNode(1, null, new TreeNode(2)), null);
+        const tree5 = new TreeNode(3, new TreeNode(2, new TreeNode(1), null), null);
 
-    //     const expectedResult = [tree1, tree2, tree3, tree4, tree5]
-    //     expect(result).toStrictEqual(expectedResult);
-    // });
+        const expectedResult = [tree1, tree2, tree3, tree4, tree5]
+        expect(result).toStrictEqual(expectedResult);
+    });
 
     test('n = 1', () => {
         const n = 1
